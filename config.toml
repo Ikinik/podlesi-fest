@@ -3,6 +3,7 @@ languageCode = "cs"
 title = "Podlesí Fest"
 theme = "hugo-creative-theme"
 googleAnalytics = ""
+publishDir = "docs"
 
 [params]
 
