@@ -1,0 +1,40 @@
+{{ "<!-- CONTACT -->" | safeHTML }}
+<section id="contact" class="bg-dark small-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                {{ with .Site.Params.contact.headline }}
+                    <h2 class="section-heading">{{ . }}</h2>
+                {{ end }}
+                {{ if and .Site.Params.contact.headline .Site.Params.contact.description }}
+                    <hr class="primary">
+                {{ end }}
+                {{ with .Site.Params.contact.description }}
+                    <p>{{ . | markdownify }}</p>
+                {{ end }}
+            </div>
+            {{ if .Site.Params.contact.facebook }}
+                <div class="
+                {{ if .Site.Params.contact.facebook }}
+                    col-lg-4
+                {{ else }}
+                    col-lg-8
+                {{ end }}
+                col-lg-offset-2 text-center">
+                    <i class="fa fa-facebook fa-3x wow bounceIn"></i>
+                </div>
+            {{ end }}
+            {{ if .Site.Params.contact.instagram }}
+                <div class="
+                {{ if .Site.Params.contact.instagram }}
+                    col-lg-4
+                {{ else }}
+                    col-lg-8 col-lg-offset-2
+                {{ end }}
+                 text-center">
+                    <i class="fa fa-instagram fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                </div>
+            {{ end }}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,45 @@
+{{ "<!-- HEADER -->" | safeHTML }}
+<header>
+    <div class="header-content">
+        <div class="header-content-inner">
+            {{ with .Site.Params.hero.slogan }}
+                <h1 id="main-caption">{{ . | markdownify  }}</h1>
+            {{ end }}
+            <table id="countdown">
+        	    <tr>
+        		  <td id="days_val" class="days val">-</td>
+        		  <td id="hours_val" class="hours val">-</td>
+        		  <td id="minutes_val" class="minutes val">-</td>
+        		  <td id="seconds_val" class="seconds val">-</td>
+        		</tr>
+        		<tr>
+        		  <td class="days tit">DAYS</td>
+        		  <td class="hours tit">HOURS</td>
+        		  <td class="minutes tit">MINUTES</td>
+        		  <td class="seconds tit">SECONDS</td>
+        		</tr>
+        	  </table>
+            <script type="text/javascript">
+              function countdown(){
+          			var d = new Date();
+          			var endTime = 1561680000000;
+          			var now = d.getTime();
+          			time = endTime - now;
+
+          			var sec = Math.ceil((time / 1000) % 60);
+          			var min = Math.ceil((time / (1000 * 60)) % 60);
+          			var hours = Math.ceil((time / (1000 * 60 * 60)) % 24);
+          			var days = Math.ceil((time / (1000 * 60 * 60 * 24)));
+
+          			document.getElementById('days_val').innerHTML = days;
+                document.getElementById('hours_val').innerHTML = hours;
+                document.getElementById('minutes_val').innerHTML = min;
+                document.getElementById('seconds_val').innerHTML = sec;
+          		}
+
+              countdown();
+        			setInterval(countdown, 1000);
+            </script>
+        </div>
+    </div>
+</header>

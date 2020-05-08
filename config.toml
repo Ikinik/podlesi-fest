@@ -1,7 +1,7 @@
 baseurl = "https://ikinik.github.io/podlesi-fest/"
 languageCode = "cs"
 title = "Podlesí Fest"
-theme = "hugo-creative-theme"
+theme = "pld-theme"
 googleAnalytics = ""
 publishDir = "docs"
 

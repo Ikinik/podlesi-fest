@@ -1,0 +1,71 @@
+{{ "<!-- TICKETS -->" | safeHTML }}
+<section id="tickets">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                {{ with .Site.Params.tickets.headline }}
+                    <h2 class="section-heading">{{ . | safeHTML }}</h2>
+                    <hr>
+                {{ end }}
+                {{ if and .Site.Params.tickets.headline .Site.Params.tickets.description }}
+                    <hr class="primary">
+                {{ end }}
+                {{ range .Site.Params.tickets.paras }}
+                  <p>{{ .para | safeHTML }}</p>
+                {{ end }}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+
+              <!-- COL grid form  -->
+              <form method="POST" name="ticket-form" action="https://us-central1-podlesi-fest.cloudfunctions.net/ticket-form">
+                <div class="fields-area">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="form-group">
+                        <label for="first-name">Jméno</label>
+                        <input name="first-name" type="text" class="form-control" id="first-name" placeholder="Frajer">
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                      <div class="form-group">
+                        <label for="sure-name">Přímení</label>
+                        <input name="sure-name" type="text" class="form-control" id="sure-name" placeholder="Kalbič">
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                      <div class="form-group">
+                        <label for="phone">Telefoní číslo</label>
+                        <input name="tel" type="tel" class="form-control" id="phone" pattern="[0-9]{3} ?[0-9]{3} ?[0-9]{3}" required="false">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input name="email" type="email" class="form-control" id="email" placeholder="frajer.kalbic@gmail.com">
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label for="price">Částka *</label>
+                        <input name="price" type="number" class="form-control" id="price" placeholder="250" min="80">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="btn btn-xl wow tada">Objednat</button>
+              </form>
+            </div>
+        </div>
+
+
+</section>
