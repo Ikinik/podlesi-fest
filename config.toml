@@ -19,11 +19,6 @@ publishDir = "docs"
 	# folder into the 'data' directory at the root of this Hugo site.
 	# For more information take a look at the README.
 
-	# To provide some metadata for search engines feel free to add some
-	# information about you and your website.
-	name = "Your name"
-	description = "Your description"
-
 	# The path must be relative to the static folder
 	favicon = "favicon.ico"
 
@@ -60,7 +55,7 @@ publishDir = "docs"
 		#description = "[Lorem](//google.com) ipsum dolor sit amet, consectetur adipisicing elit. Praesentium similique eos eligendi error veritatis harum, sed aliquid totam, quam minus neque enim est architecto, ad. Maiores, aliquid, vitae!"
 		description = "Chtěl by si festovně zakalit, ale taky zahrát? Není problém. Napiš nám něco o sobě a nějak už se domluvíme. Případně nás můžeš kontaktovat přes facebook, nebo rovnou zavolat."
 		phone 			= "+420 608 055 822"
-		email 			= "kontakt@podlesi-fest.cz"
+		email 			= "party@podlesi-fest.cz"
 
 	# Service section
 	[params.services]
@@ -93,14 +88,7 @@ publishDir = "docs"
 
     # Portfolio modals
 	[params.portfolio.modal]
-        client = "Client"
-        date = "Date"
-        category = "Category"
-        buttonText = "Close"
-
-		[params.aside.button]
-			text = "Download now"
-			link = "//github.com/digitalcraftsman/hugo-creative-theme"
+  	buttonText = "Zavřít"
 
 	# Contact section
 	[params.contact]

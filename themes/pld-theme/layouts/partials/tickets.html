@@ -20,7 +20,7 @@
             <div class="col-lg-8 col-lg-offset-2 text-center">
 
               <!-- COL grid form  -->
-              <form method="POST" name="ticket-form" action="https://us-central1-podlesi-fest.cloudfunctions.net/ticket-form">
+              <form method="POST" name="ticket-form" action="http://localhost:5000/">
                 <div class="fields-area">
                   <div class="row">
                     <div class="col-lg-4">
@@ -40,7 +40,7 @@
                     <div class="col-lg-4">
                       <div class="form-group">
                         <label for="phone">Telefoní číslo</label>
-                        <input name="tel" type="tel" class="form-control" id="phone" pattern="[0-9]{3} ?[0-9]{3} ?[0-9]{3}" required="false">
+                        <input name="tel" type="tel" class="form-control" id="phone" pattern="[0-9]{3} ?[0-9]{3} ?[0-9]{3}">
                       </div>
                     </div>
                   </div>
@@ -56,7 +56,7 @@
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label for="price">Částka *</label>
-                        <input name="price" type="number" class="form-control" id="price" placeholder="250" min="80">
+                        <input name="price" type="number" class="form-control" id="price" value="250" min="80">
                       </div>
                     </div>
                   </div>
