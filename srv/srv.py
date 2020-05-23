@@ -1,43 +1,37 @@
-from flask import Flask, request
-from sendgrid import SendGridAPIClient
-from sendgrid.helpers.mail import Mail
-import re
-import key
+from flask import Flask, request, redirect
+from firebase_admin import credentials
+from firebase_admin import firestore
+from member import Member
+import re, firebase_admin
 
 app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def ticket():
-    required = ['first-name', 'sure-name', 'email', 'price']
+    # Validate inputs
+    required = ['first-name', 'sure-name', 'email', 'promise']
 
     if not request.form:
-        return "No input data sent!"
+        return redirect("http://localhost:1313/podlesi-fest/#tickets&err", code=302)
 
     for param in required:
         if (param not in request.form) or (not request.form[param]):
-            return "Error: unspecified param: %s" % param, 400
+            return redirect("http://localhost:1313/podlesi-fest/#tickets&err", code=302)
 
     if not re.match(r"[^@]+@[^@]+\.[^@]+", request.form['email']):
-        return "Error: invalid email format: %s" % request.form['email'], 400
+        return redirect("http://localhost:1313/podlesi-fest/#tickets&err", code=302)
 
+    #Insert data and send message
+    member = Member(request.form['first-name'],
+                    request.form['sure-name'],
+                    request.form['email'],
+                    request.form['promise'],
+                    request.form['tel'])
 
-    message = Mail(
-        from_email='ticket@podlesi-fest.eu',
-        to_emails=request.form['email'],
-        subject='Sending with Twilio SendGrid is Fun',
-        html_content='<strong>and easy to do anywhere, even with Python</strong>')
-
-    try:
-        sg = SendGridAPIClient(SENDGRID_KEY)
-        response = sg.send(message)
-        print(response.status_code)
-        print(response.body)
-        print(response.headers)
-    except Exception as e:
-        print(e)
-
-
-    return "Yeah email was sent !"
+    if member.sendMail()[0]:
+        return redirect("http://localhost:1313/podlesi-fest/#tickets&ok", code=302)
+    else:
+        return redirect("http://localhost:1313/podlesi-fest/#tickets&err", code=302)
 
 if __name__ == '__main__':
     app.run()
