@@ -4,12 +4,12 @@
         {{ partial "head.html" . }}
     </head>
     <body id="page-top">
-        {{ if or .Site.Params.navigation.links.about .Site.Params.navigation.links.interprets .Site.Params.navigation.links.portfolio .Site.Params.navigation.links.contact }}
+        {{ if or .Site.Params.navigation.links.star .Site.Params.navigation.links.interprets .Site.Params.navigation.links.program .Site.Params.navigation.links.contact }}
             {{ partial "nav.html" . }}
         {{ end }}
 
-        {{ if .Site.Params.hero }}
-            {{ partial "hero.html" . }}
+        {{ if .Site.Params.intro }}
+            {{ partial "intro.html" . }}
         {{ end }}
 
         {{ if .Site.Params.interprets.list }}
@@ -17,7 +17,7 @@
         {{ end }}
 
         {{ if .Site.Data.projects }}
-            {{ partial "portfolio.html" . }}
+            {{ partial "program.html" . }}
         {{ end }}
 
         {{ if .Site.Params.location }}
@@ -28,8 +28,8 @@
             {{ partial "tickets.html" . }}
         {{ end }}
 
-        {{ if .Site.Params.about }}
-            {{ partial "about.html" . }}
+        {{ if .Site.Params.star }}
+            {{ partial "star.html" . }}
         {{ end }}
 
         {{ if .Site.Data.projects }}

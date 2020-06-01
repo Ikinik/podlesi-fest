@@ -531,6 +531,7 @@ body {
 }
 
 /* my specific styling */
+.grecaptcha-badge { visibility: hidden;}
 
 table#countdown {display: table; margin: 0 auto; margin-top: 15px}
 table#countdown td {padding: 0px 25px 0px 25px; text-align: center; font-weight: bold; font-family: 'Ubuntu', sans-serif; color: #676666}

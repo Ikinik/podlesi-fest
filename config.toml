@@ -29,10 +29,10 @@ publishDir = "docs"
 
 		[params.navigation.links]
       interprets  = "Interpreti"
-			portfolio 	= "Na co se těšit"
+			program 	 	= "Na co se těšit"
 			location		= "Jak k nám"
 			tickets			= "Vstupenky"
-			about     	= "Chci vystupovat"
+			star     	= "Chci vystupovat"
 
 		[params.navigation.socials]
 			[[params.navigation.socials.list]]
@@ -44,13 +44,13 @@ publishDir = "docs"
 				link = "https://www.instagram.com/?hl=cs#reactivated"
 
 
-	# Hero section
-	[params.hero]
+	# intro section
+	[params.intro]
 		# To change the background of the hero section, replace the 'header.jpg' at './static/img' with your own.
 		slogan     = "Podlesí Fest"
 
 	# About section
-	[params.about]
+	[params.star]
 		headline    = "Chci vystupovat"
 		#description = "[Lorem](//google.com) ipsum dolor sit amet, consectetur adipisicing elit. Praesentium similique eos eligendi error veritatis harum, sed aliquid totam, quam minus neque enim est architecto, ad. Maiores, aliquid, vitae!"
 		description = "Chtěl by si festovně zakalit, ale taky zahrát? Není problém. Napiš nám něco o sobě a nějak už se domluvíme. Případně nás můžeš kontaktovat přes facebook, nebo rovnou zavolat."
@@ -86,8 +86,8 @@ publishDir = "docs"
             description = "Interpret, který nesmí chybět na žádné párty!"
 
 
-    # Portfolio modals
-	[params.portfolio.modal]
+    # program modals
+	[params.program.modal]
   	buttonText = "Zavřít"
 
 	# Contact section

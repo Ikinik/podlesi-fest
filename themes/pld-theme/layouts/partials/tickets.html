@@ -19,8 +19,14 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
 
+              <script type="text/javascript">
+                 function ticketFormSubmit(token) {
+                   document.getElementById("ticket-form").submit();
+                 }
+              </script>
+
               <!-- COL grid form  -->
-              <form method="POST" name="ticket-form" action="http://localhost:5000/">
+              <form id="ticket-form" method="POST" name="ticket-form" action="https://europe-west1-podlesi-fest.cloudfunctions.net/ticket_request">
                 <div class="fields-area">
                   <div class="row">
                     <div class="col-lg-4">
@@ -62,7 +68,7 @@
                   </div>
                 </div>
 
-                <button class="btn btn-xl wow tada">Objednat</button>
+                <button class="btn btn-xl wow tada g-recaptcha" data-sitekey="6LenTv4UAAAAAFxBiIr0IiuoSbo-FCYZjtukGd9P" data-callback='ticketFormSubmit'>Objednat</button>
               </form>
             </div>
         </div>

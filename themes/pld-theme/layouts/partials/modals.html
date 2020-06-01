@@ -22,7 +22,7 @@
                         {{ with .description }}
                             <p>{{ . | markdownify }}</p>
                         {{ end }}
-                        {{ with $.Site.Params.portfolio.modal.buttonText }}
+                        {{ with $.Site.Params.program.modal.buttonText }}
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>{{.}}</button>
                         {{ end }}
                     </div>

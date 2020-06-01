@@ -21,9 +21,9 @@
                         <a class="page-scroll" href="#services">{{ .Site.Params.navigation.links.interprets }}</a>
                     </li>
                 {{ end }}
-                {{ if and .Site.Data.projects .Site.Params.navigation.links.portfolio }}
+                {{ if and .Site.Data.projects .Site.Params.navigation.links.program }}
                     <li>
-                        <a class="page-scroll" href="#portfolio">{{ .Site.Params.navigation.links.portfolio }}</a>
+                        <a class="page-scroll" href="#portfolio">{{ .Site.Params.navigation.links.program }}</a>
                     </li>
                 {{ end }}
                 {{ if and .Site.Params.location .Site.Params.navigation.links.location }}
@@ -36,9 +36,9 @@
                     <a class="page-scroll" href="#tickets">{{ .Site.Params.navigation.links.tickets }}</a>
                 </li>
                 {{ end }}
-                {{ if and .Site.Params.about .Site.Params.navigation.links.about }}
+                {{ if and .Site.Params.star .Site.Params.navigation.links.star }}
                     <li>
-                        <a class="page-scroll" href="#about">{{ .Site.Params.navigation.links.about }}</a>
+                        <a class="page-scroll" href="#about">{{ .Site.Params.navigation.links.star }}</a>
                     </li>
                 {{ end }}
                 {{ if and .Site.Params.contact .Site.Params.navigation.links.contact }}
