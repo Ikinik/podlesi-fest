@@ -102,7 +102,7 @@ publishDir = "docs"
 	[params.tickets]
 		headline = "Vstupenky"
 		phone = "+420 608 055 822"
-		email = "kontakt@podlesi-fest.cz"
+		email = "party@podlesi-fest.cz"
 
 		[[params.tickets.paras]]
 			para = "Vstupenky můžeš koupit v předprodeji. Budeme moc rádi když nám zavčasu přispěješ, abychom moli bez problémů vše zařídit a ty sis mohl řádně užít Podlesí jak se sluší a patří. <br>⌐■_■"
