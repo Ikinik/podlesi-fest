@@ -5,8 +5,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-<meta name="generator" content="Hugo 0.16-DEV" />
 <title>Podlesí Fest</title>
 
 <!-- Favicon -->
@@ -136,7 +134,7 @@
             <script type="text/javascript">
               function countdown(){
           			var d = new Date();
-          			var endTime = 1561680000000;
+          			var endTime = 1598007600000;
           			var now = d.getTime();
           			time = endTime - now;
 
@@ -162,7 +160,7 @@
 
         
             <!-- SERVICES -->
-<section id="services">
+<section id="interprets">
     
         <div class="container">
             <div class="row">
@@ -193,8 +191,8 @@
             <div class="col-lg-3 col-md-6 text-center">
                 <div class="service-box">
                     
-                    <img src="img/bands/vasa.png" height="128" width="128" alt="Váša">
-                    <h3>Váša</h3>
+                    <img src="img/bands/vaasha.png" height="128" width="128" alt="Vaasha">
+                    <h3>Vaasha</h3>
                     
                         <p class="text-muted">Deep techno, house</p>
                     
@@ -235,7 +233,7 @@
         
 
         
-            <section class="no-padding" id="portfolio">
+            <section class="no-padding" id="program">
     <div class="container-fluid">
         <div class="row no-gutter">
             
@@ -379,7 +377,6 @@
 
         
             
-
 <section id="location" class="no-padding bg-dark">
     
         <div class="container">
@@ -437,7 +434,7 @@
                 
                   <p>Výše vstupného je dobrovolná a závisí na tobě jak moc nás budeš chtít podpořit. Neboj, vše dáváme do podlesí a ani koruna nepadne nazmar. Do morku kosti se snažíme využít každou&nbsp;peny, na maximální kalbu.</p>
                 
-                  <p>Doporučená výše vstupného na 3 dny je <strong>250kč</strong>. Samozdřejmně se na tebe nebudeme zlobit, když nám nějaký ten fufník přihodíš navíc. Pokud nám přispěješ částkou nad 300kč, můžeš se u&nbsp;vstupu těšit na uvítací párt balíček který ti jistě přijde vhod ;)</p>
+                  <p>Doporučená výše vstupného na 3 dny je <strong>300kč</strong>. Samozdřejmně se na tebe nebudeme zlobit, když nám nějaký ten fufník přihodíš navíc. Pokud nám přispěješ částkou nad 350kč, můžeš se u&nbsp;vstupu těšit na uvítací párt balíček který ti jistě přijde vhod ;)</p>
                 
             </div>
         </div>
@@ -445,20 +442,26 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
 
+              <script type="text/javascript">
+                 function ticketFormSubmit(token) {
+                   document.getElementById("ticket-form").submit();
+                 }
+              </script>
+
               
-              <form method="POST" name="ticket-form" action="http://localhost:5000/">
+              <form id="ticket-form" method="POST" name="ticket-form" action="https://europe-west1-podlesi-fest.cloudfunctions.net/ticket_request">
                 <div class="fields-area">
                   <div class="row">
                     <div class="col-lg-4">
                       <div class="form-group">
-                        <label for="first-name">Jméno</label>
+                        <label for="first-name">Jméno *</label>
                         <input name="first-name" type="text" class="form-control" id="first-name" placeholder="Frajer">
                       </div>
                     </div>
 
                     <div class="col-lg-4">
                       <div class="form-group">
-                        <label for="sure-name">Přímení</label>
+                        <label for="sure-name">Přímení *</label>
                         <input name="sure-name" type="text" class="form-control" id="sure-name" placeholder="Kalbič">
                       </div>
                     </div>
@@ -481,18 +484,17 @@
 
                     <div class="col-lg-6">
                       <div class="form-group">
-                        <label for="price">Částka *</label>
-                        <input name="price" type="number" class="form-control" id="price" value="250" min="80">
+                        <label for="promise">Částka *</label>
+                        <input name="promise" type="number" class="form-control" id="price" value="300" min="100">
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <button class="btn btn-xl wow tada">Objednat</button>
+                <button class="btn btn-xl wow tada g-recaptcha" data-sitekey="6LenTv4UAAAAAFxBiIr0IiuoSbo-FCYZjtukGd9P" data-callback='ticketFormSubmit'>Objednat</button>
               </form>
             </div>
         </div>
-
 
 </section>
 
@@ -500,7 +502,7 @@
 
         
             <!-- ABOUT -->
-<section class="bg-primary" id="about">
+<section class="bg-primary" id="star">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -748,6 +750,7 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="https://ikinik.github.io/podlesi-fest/js/creative.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
         
