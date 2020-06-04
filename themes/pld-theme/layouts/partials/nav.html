@@ -18,12 +18,12 @@
             <ul class="nav navbar-nav navbar-right">
                 {{ if and .Site.Params.interprets.list .Site.Params.navigation.links.interprets }}
                     <li>
-                        <a class="page-scroll" href="#services">{{ .Site.Params.navigation.links.interprets }}</a>
+                        <a class="page-scroll" href="#interprets">{{ .Site.Params.navigation.links.interprets }}</a>
                     </li>
                 {{ end }}
                 {{ if and .Site.Data.projects .Site.Params.navigation.links.program }}
                     <li>
-                        <a class="page-scroll" href="#portfolio">{{ .Site.Params.navigation.links.program }}</a>
+                        <a class="page-scroll" href="#program">{{ .Site.Params.navigation.links.program }}</a>
                     </li>
                 {{ end }}
                 {{ if and .Site.Params.location .Site.Params.navigation.links.location }}
@@ -38,7 +38,7 @@
                 {{ end }}
                 {{ if and .Site.Params.star .Site.Params.navigation.links.star }}
                     <li>
-                        <a class="page-scroll" href="#about">{{ .Site.Params.navigation.links.star }}</a>
+                        <a class="page-scroll" href="#star">{{ .Site.Params.navigation.links.star }}</a>
                     </li>
                 {{ end }}
                 {{ if and .Site.Params.contact .Site.Params.navigation.links.contact }}
