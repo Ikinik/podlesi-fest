@@ -20,7 +20,9 @@
                         {{ end }}
                         <img src="img/portfolio/{{ .img }}" class="img-responsive img-centered" alt="">
                         {{ with .description }}
+                        <div class="modal-description">
                             <p>{{ . | markdownify }}</p>
+                        </div>
                         {{ end }}
                         {{ with $.Site.Params.program.modal.buttonText }}
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>{{.}}</button>

@@ -17,7 +17,7 @@ body {
 }
 
 .portfolio-modal .modal-content {
-    padding: 100px 0;
+    padding: 100px 0px;
     min-height: 100%;
     border: 0;
     border-radius: 0;
@@ -38,6 +38,12 @@ body {
 
 .portfolio-modal .modal-content .item-details {
     margin: 30px 0;
+}
+
+.portfolio-modal .modal-content .modal-description {
+  text-align: justify;
+  max-width: 650px;
+  margin: 0px auto
 }
 
 .portfolio-modal .close-modal {
