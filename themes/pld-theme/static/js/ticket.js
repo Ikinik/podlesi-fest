@@ -24,13 +24,12 @@ function ticketFormSubmit(token) {
 
   if(!errors_occured){
     $("#ticket-form input").each(function(index){
-      $(this).attr("disabled", true);
+      $(this).addClass('shadow');
     });
 
     $('#ticket-form-btn').text("Odesílám ...").attr("disabled", true);
     document.getElementById("ticket-form").submit();
   }
-
 }
 
 $(document).ready(function(){
@@ -58,8 +57,6 @@ $(document).ready(function(){
     });
 
     if("tickets" in vals && "req" in vals){
-      console.log("Yeees its here");
-
       var req_decoded = decodeURIComponent(vals['req']);
       var json_decoded = atou(req_decoded);
       var data = JSON.parse(json_decoded);
