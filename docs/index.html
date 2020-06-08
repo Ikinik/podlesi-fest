@@ -412,12 +412,6 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
 
-              <script type="text/javascript">
-                 function ticketFormSubmit(token) {
-                   document.getElementById("ticket-form").submit();
-                 }
-              </script>
-
               
               <form id="ticket-form" method="POST" name="ticket-form" action="https://europe-west1-podlesi-fest.cloudfunctions.net/ticket_request">
                 <div class="fields-area">
@@ -425,21 +419,21 @@
                     <div class="col-lg-4">
                       <div class="form-group">
                         <label for="first-name">Jméno *</label>
-                        <input name="first-name" type="text" class="form-control" id="first-name" placeholder="Frajer">
+                        <input name="first-name" type="text" class="form-control required" id="first-name" placeholder="Frajer" />
                       </div>
                     </div>
 
                     <div class="col-lg-4">
                       <div class="form-group">
                         <label for="sure-name">Přímení *</label>
-                        <input name="sure-name" type="text" class="form-control" id="sure-name" placeholder="Kalbič">
+                        <input name="sure-name" type="text" class="form-control required" id="sure-name" placeholder="Kalbič" />
                       </div>
                     </div>
 
                     <div class="col-lg-4">
                       <div class="form-group">
                         <label for="phone">Telefoní číslo</label>
-                        <input name="tel" type="tel" class="form-control" id="phone" pattern="[0-9]{3} ?[0-9]{3} ?[0-9]{3}">
+                        <input name="tel" type="tel" class="form-control" id="phone" pattern="[0-9]{3} ?[0-9]{3} ?[0-9]{3}" />
                       </div>
                     </div>
                   </div>
@@ -448,20 +442,22 @@
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label for="email">Email *</label>
-                        <input name="email" type="email" class="form-control" id="email" placeholder="frajer.kalbic@gmail.com">
+                        <input name="email" type="email" class="form-control required" id="email" placeholder="frajer.kalbic@gmail.com" />
                       </div>
                     </div>
 
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label for="promise">Částka *</label>
-                        <input name="promise" type="number" class="form-control" id="price" value="300" min="100">
+                        <input name="promise" type="number" class="form-control required" id="price" value="300" min="100" />
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <button class="btn btn-xl wow tada g-recaptcha" data-sitekey="6LenTv4UAAAAAFxBiIr0IiuoSbo-FCYZjtukGd9P" data-callback='ticketFormSubmit'>Objednat</button>
+                <p id="ticket-form-warning"><i class="fa fa-warning"></i>&nbsp;&nbsp; Něco se pokazilo. Zkus prosím vyplnit formulář znova. &nbsp;&nbsp;<i class="fa fa-warning"></i></p>
+
+                <button id="ticket-form-btn" class="btn btn-xl wow tada g-recaptcha" data-sitekey="6LenTv4UAAAAAFxBiIr0IiuoSbo-FCYZjtukGd9P" data-callback='ticketFormSubmit'>Objednat</button>
               </form>
             </div>
         </div>

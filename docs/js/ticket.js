@@ -6,7 +6,35 @@ function atou(str){
   return decodeURIComponent(escape(window.atob(str)));
 }
 
+function ticketFormSubmit(token) {
+  //validate form
+  var errors_occured = false;
+  $("#ticket-form input.required").each(function(index){
+    if(! $(this).val()){
+      $(this).addClass("err").attr("title", "Vyplň mě prosím.").change(function(e){
+        //remove warning on change
+        if($(this).val()){
+          $(this).removeClass("err").attr("title", "");
+        }
+      });
+
+      errors_occured = true;
+    }
+  });
+
+  if(!errors_occured){
+    $("#ticket-form input").each(function(index){
+      $(this).attr("disabled", true);
+    });
+
+    $('#ticket-form-btn').text("Odesílám ...").attr("disabled", true);
+    document.getElementById("ticket-form").submit();
+  }
+
+}
+
 $(document).ready(function(){
+  //redirect on modal close
   $(".modal-payment-close").each(function(index){
     $(this).click(function(e){
       window.location = "#tickets";
@@ -36,12 +64,14 @@ $(document).ready(function(){
       var json_decoded = atou(req_decoded);
       var data = JSON.parse(json_decoded);
 
-      console.log(data);
       $("#tickets-payment-promise").text(data["promise"]);
       $("#tickets-payment-variable-symbol").text(data["variable_symbol"]);
       $("#tickets-payment-bank-account").text(data["bank_account"]);
       $("#tickets-payment-name").text(data["name"]);
       $('#tickets-modal').modal('toggle');
+    }else if("tickets" in vals && "err" in vals){
+      $("#tickets").get(0).scrollIntoView();
+      $("#ticket-form-warning").addClass("show");
     }
   }
 });
