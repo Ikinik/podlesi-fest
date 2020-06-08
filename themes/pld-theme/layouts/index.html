@@ -36,6 +36,10 @@
             {{ partial "modals.html" . }}
         {{ end }}
 
+        {{ if .Site.Params.tickets }}
+            {{ partial "tickets-modal.html" . }}
+        {{ end }}
+
         {{ partial "js.html" . }}
 
         {{ template "_internal/google_analytics.html" . }}

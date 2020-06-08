@@ -1,0 +1,47 @@
+{{ "<!-- Tickets Modal -->" | safeHTML }}
+<div class="portfolio-modal modal fade" id="tickets-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal modal-payment-close" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>Děkujeme</h2>
+                        <hr class="star-primary">
+                        <div class="modal-description">
+                            <p>Výborně, jsi na správné cestě. Právě činíš důležité životní rozhodnutí, po kterém tůj život už nikdy nebude jako dřív. Zbývá už ti jen jeden malý nepatrný krůček. Zašli&nbsp;prosím:</p>
+                            <div id="pament-info" class="row">
+                              <div class="col-lg-6">
+                                <div class="box-center">
+                                  <div class="text-lg-left text-center ticket-payment-capt">Zašli:</div>
+                                  <div class="text-lg-left text-center ticket-payment-text" id="tickets-payment-promise"></div>
+
+                                  <div class="text-lg-left text-center ticket-payment-capt">Variabilní symbol:</div>
+                                  <div class="text-lg-left text-center ticket-payment-text" id="tickets-payment-variable-symbol"></div>
+                                </div>
+                              </div>
+                              <div class="col-lg-6">
+                                <div class="box-center">
+                                  <div class="text-lg-left text-center ticket-payment-capt">Na účet:</div>
+                                  <div class="text-lg-left text-center ticket-payment-text" id="tickets-payment-bank-account"></div>
+                                  <div class="text-lg-left text-center ticket-payment-capt">Zpráva pro příjemce:</div>
+                                  <div class="text-lg-left text-center ticket-payment-text" id="tickets-payment-name"></div>
+                                </div>
+                              </div>
+                            </div>
+                            <p><small>Pokud teď nemáš čas trápit se s bankou, nevadí. Instrukce jsme ti pro jistotu posali i mailem ;)</small></p>
+                        </div>
+                        {{ with $.Site.Params.program.modal.buttonText }}
+                            <button type="button" class="btn btn-default modal-payment-close" data-dismiss="modal"><i class="fa fa-times"></i>{{.}}</button>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

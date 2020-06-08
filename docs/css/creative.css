@@ -531,7 +531,12 @@ body {
 }
 
 /* my specific styling */
+@media (min-width: 1200px) {
+  .text-lg-left {text-align: left}
+}
+
 .grecaptcha-badge { visibility: hidden;}
+.box-center {display: table; margin: 0px auto}
 
 table#countdown {display: table; margin: 0 auto; margin-top: 15px}
 table#countdown td {padding: 0px 25px 0px 25px; text-align: center; font-weight: bold; font-family: 'Ubuntu', sans-serif; color: #676666}
@@ -547,5 +552,9 @@ a.zoom:hover img {
 #location.no-padding .centered-content {padding-bottom: 60px}
 .centered-content {max-width: 1200px; padding-left: 40px; padding-right: 40px; padding-bottom: 30px; margin: 0px auto}
 
-#tickets
-.fields-area {margin-top: 20px; margin-bottom: 20px}
+#tickets .fields-area {margin-top: 20px; margin-bottom: 20px}
+
+#tickets-modal .modal-description {padding-bottom: 20px}
+#tickets-modal .ticket-payment-text {font-size: 24px; margin-top: 2px}
+#tickets-modal .ticket-payment-capt {margin-top: 20px}
+#tickets-modal #pament-info {margin-bottom: 40px}
