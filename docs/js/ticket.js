@@ -61,7 +61,7 @@ $(document).ready(function(){
       var json_decoded = atou(req_decoded);
       var data = JSON.parse(json_decoded);
 
-      $("#tickets-payment-promise").text(data["promise"]);
+      $("#tickets-payment-promise").text(data["promise"] + " Kč");
       $("#tickets-payment-variable-symbol").text(data["variable_symbol"]);
       $("#tickets-payment-bank-account").text(data["bank_account"]);
       $("#tickets-payment-name").text(data["name"]);
