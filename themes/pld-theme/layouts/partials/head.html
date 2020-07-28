@@ -2,6 +2,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+
+<!-- FACEBOOK share description -->
+<meta property="og:url"           content="{{ .Site.BaseURL }}" />
+<meta property="og:type"          content="og:product" />
+<meta property="og:title"         content="Podlesí Fest | 21-23.8" />
+<meta property="og:description"   content="Osmý ročník legendární rave párty v podlesí. Improvised Live Electronic Music | House | Techno | Acüd | Trance | Folk | Dream Pop | Shoegaze | Rock | Visualization | Land Art | Jam Session" />
+<meta property="og:image"         content="{{ "img/header.jpg" | absURL  }}" />
+
 <title>{{ .Site.Title }}</title>
 
 {{ "<!-- Favicon -->" | safeHTML }}
