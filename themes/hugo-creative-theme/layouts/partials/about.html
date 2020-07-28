@@ -1,0 +1,35 @@
+{{ "<!-- ABOUT -->" | safeHTML }}
+<section class="bg-primary" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                {{ with .Site.Params.about.headline }}
+                    <h2 class="section-heading text-faded">{{ . }}</h2>
+                {{ end }}
+                {{ if and .Site.Params.about.headline .Site.Params.about.description }}
+                    <hr class="light">
+                {{ end }}
+                {{ with .Site.Params.about.description }}
+                    <p class="text-faded">{{ . | markdownify }}</p>
+                {{ end }}
+                {{ with .Site.Params.about.buttonText }}
+                    <a href="#" class="btn btn-default btn-xl">{{ . }}</a>
+                {{ end }}
+            </div>
+        </div>
+        <div class="row">
+          {{ if .Site.Params.about.phone }}
+            <div class="col-lg-4 col-lg-offset-2 text-center text-faded">
+                <i class="fa fa-phone fa-3x wow bounceIn"></i>
+                <p class="text-faded">{{ .Site.Params.about.phone }}</p>
+            </div>
+          {{ end }}
+          {{ if .Site.Params.about.email }}
+            <div class="col-lg-4 col-lg-inset-2 text-center text-faded">
+                <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                <p><a id="mail-link" class="text-faded" href="mailto:{{ .Site.Params.contact.email }}"><span>{{ .Site.Params.about.email }}</span></a></p>
+            </div>
+          {{ end }}
+        </div>
+    </div>
+</section>

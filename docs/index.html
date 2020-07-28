@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="cs">
     <head>
+	<meta name="generator" content="Hugo 0.69.2" />
         <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,7 +37,7 @@
     <body id="page-top">
         
             <!-- NAVIGATION -->
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+<nav id="mainNav" class="navbar navbar-default navbar-expand-lg navbar-fixed-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -131,35 +132,50 @@
         		  <td class="seconds tit">SECONDS</td>
         		</tr>
         	  </table>
-            <script type="text/javascript">
-              function countdown(){
-          			var d = new Date();
-          			var endTime = 1598007600000;
-          			var now = d.getTime();
-          			time = endTime - now;
-
-          			var sec = Math.ceil((time / 1000) % 60);
-          			var min = Math.ceil((time / (1000 * 60)) % 60);
-          			var hours = Math.ceil((time / (1000 * 60 * 60)) % 24);
-          			var days = Math.ceil((time / (1000 * 60 * 60 * 24)));
-
-          			document.getElementById('days_val').innerHTML = days;
-                document.getElementById('hours_val').innerHTML = hours;
-                document.getElementById('minutes_val').innerHTML = min;
-                document.getElementById('seconds_val').innerHTML = sec;
-          		}
-
-              countdown();
-        			setInterval(countdown, 1000);
-            </script>
         </div>
     </div>
+    <div id="header-bottom-info">
+      21-23.8<span class="collapsed-span"> | </span><div id="count-down-box"><div class="t-box" id="days_inline_val"></div>:<div class="t-box" id="hours_inline_val"></div>:<div class="t-box" id="minutes_inline_val"></div>:<div class="t-box" id="seconds_inline_val"></div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      function countdown(){
+        var d = new Date();
+        var endTime = 1598007600000;
+        var now = d.getTime();
+        time = endTime - now;
+
+        var sec = Math.ceil((time / 1000) % 60);
+        var min = Math.ceil((time / (1000 * 60)) % 60);
+        var hours = Math.ceil((time / (1000 * 60 * 60)) % 24);
+        var days = Math.ceil((time / (1000 * 60 * 60 * 24)));
+
+        document.getElementById('days_val').innerHTML = days;
+        document.getElementById('hours_val').innerHTML = hours;
+        document.getElementById('minutes_val').innerHTML = min;
+        document.getElementById('seconds_val').innerHTML = sec;
+
+        document.getElementById('days_inline_val').innerHTML = pad(days, 2);
+        document.getElementById('hours_inline_val').innerHTML = pad(hours, 2);
+        document.getElementById('minutes_inline_val').innerHTML = pad(min, 2);
+        document.getElementById('seconds_inline_val').innerHTML = pad(sec, 2);
+      }
+
+      function pad(num, size) {
+          var s = num+"";
+          while (s.length < size) s = "0" + s;
+          return s;
+      }
+
+      countdown();
+      setInterval(countdown, 1000);
+    </script>
 </header>
 
         
 
         
-            <!-- SERVICES -->
+            <!-- Interprets -->
 <section id="interprets">
     
         <div class="container">
@@ -279,7 +295,7 @@
                                 <div class="portfolio-box-caption-content">
                                     
                                         <div class="project-name">
-                                            Project 3
+                                            Staří známí
                                         </div>
                                     
                                 </div>
@@ -296,7 +312,7 @@
                                 <div class="portfolio-box-caption-content">
                                     
                                         <div class="project-name">
-                                            Project 5
+                                            Stanové městečko
                                         </div>
                                     
                                 </div>
@@ -374,15 +390,13 @@
         <p class="text-faded">Pak už jen pěšky přes kopec a jsi tu.</p>
       </div>
     
-    <div class="hidden">
-        <input id="gmap-lat" value="50.267853" />
-        <input id="gmap-lng" value="12.882203" />
-    </div>
-    <a target="_blank" href="https://www.google.com/maps?z=16&q=50.267853,12.882203&ll=50.267853,12.882203">
-        <div id="map">
-            &nbsp;
-        </div>
-    </a>
+    <iframe
+      id="google-map"
+      width="100%"
+      height="600"
+      frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyADDvRS1ctmnFAaXxgJ_cB4DZebsxLKg-8&q=50.267853,12.882203&zoom=12&maptype=satellite" allowfullscreen>
+    </iframe>
 </section>
 
 
@@ -468,7 +482,7 @@
 
         
             <!-- ABOUT -->
-<section class="bg-primary" id="star">
+<section class="bg-dark" id="star">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -527,7 +541,7 @@
                         <img src="img/portfolio/stage.jpg" class="img-responsive img-centered" alt="">
                         
                         <div class="modal-description">
-                            <p>Jako každý rok se vás mimo krásné přírody a klidným lesem budeme snažit zabavit i hudebně vizuálním programem. Vystoupí hrstka hudebních interpretů, přičemž denní program se bude skládat z nezávislého jamu členů všech kapel. O večerní až ranní hudební program se postará živá produkce elektronické hudby v doprovodu video projekce a světelné instalace v celém areálu. Pokud vás ani toto neuspokojí tak se vašemu očku představí vybraní grafici, malíři a fotografové, kteří budou svá díla vystavovat po celou dobu akce.<br><br>Pakliže zatoužíte po i po interaktivnější zábavě, tak si jistě zamilujete kousky land-artového umění, jako například umělecká latrína ( jediná dvou-latrína na akci :D ), nebo výběh koz, které nejsou jen na našem logu ale i na dosah ruky od místa konání.</p>
+                            <p>Jako každý rok se vás mimo krásné přírody a klidným lesem budeme snažit zabavit i hudebně vizuálním programem. Vystoupí hrstka hudebních interpretů, přičemž denní program se bude skládat z nezávislého jamu členů všech kapel. O večerní až ranní hudební program se postará živá produkce elektronické hudby v doprovodu video projekce a světelné instalace v celém areálu. Pokud vás ani toto neuspokojí tak se vašemu očku představí vybraní grafici, malíři a fotografové, kteří budou svá díla vystavovat po celou dobu akce.<!-- raw HTML omitted --><!-- raw HTML omitted -->Pakliže zatoužíte po i po interaktivnější zábavě, tak si jistě zamilujete kousky land-artového umění, jako například umělecká latrína ( jediná dvou-latrína na akci :D ), nebo výběh koz, které nejsou jen na našem logu ale i na dosah ruky od místa konání.</p>
                         </div>
                         
                         
@@ -587,7 +601,7 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <div class="modal-body">
                         
-                            <h2>Project 3</h2>
+                            <h2>Staří známí</h2>
                         
                         
                             <hr class="star-primary">
@@ -595,7 +609,9 @@
                         <img src="img/portfolio/masa.jpg" class="img-responsive img-centered" alt="">
                         
                         <div class="modal-description">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel enim aliquid dicta ullam in repellendus amet perspiciatis adipisci architecto obcaecati sit voluptas ipsam, deleniti neque placeat tenetur cum tempore velit.</p>
+                            <p><p>Ačkoliv nám to tak nemusí vůbec připadat, je to už slušná řádka let, co jsme se po střední rozutekli daleko do světa. Přijeďte opět společně zavzpomínat na staré časy, připít si a pokalit.</p>
+<p>Letošní ročník je již bezmála 8. v řadě a má rozhodně opět co nabídnout ;)</p>
+</p>
                         </div>
                         
                         
@@ -621,7 +637,7 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <div class="modal-body">
                         
-                            <h2>Project 5</h2>
+                            <h2>Stanové městečko</h2>
                         
                         
                             <hr class="star-primary">
@@ -629,7 +645,9 @@
                         <img src="img/portfolio/stany.jpg" class="img-responsive img-centered" alt="">
                         
                         <div class="modal-description">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel enim aliquid dicta ullam in repellendus amet perspiciatis adipisci architecto obcaecati sit voluptas ipsam, deleniti neque placeat tenetur cum tempore velit.</p>
+                            <p><p>Pokud si lámete hlavu s tím, jak to vlastně letos bude se spaním. Buďte bez obav, nic takového nehrozí. Letos se spát nebude !!</p>
+<p>Pokud by se vám přeci jen z toho samého skotačení na techna klížila víčka. Máme pro vás opět připravené stanové městečko na louce za kozím chlívkem. Zde budete moci v klidu načerpat novou energii. Ohlušující burácení bubnů vás zde nebude nikterak rušit a vy si tak budete moci spokojeně užít krásné chvíle společného odpočinku ;)</p>
+</p>
                         </div>
                         
                         

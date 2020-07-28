@@ -1,0 +1,40 @@
+
+{{ if and .Site.Params.location.latitude .Site.Params.location.longitude }}
+<section id="location" class="no-padding bg-dark">
+    {{ with .Site.Params.location.headline }}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">{{ . }}</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+    {{ end }}
+    {{ with .Site.Params.location.description }}
+      <div class="centered-content">
+        <p class="text-faded">Tvým primárním cílem je nádherné lázešké město Karlovy Vary. Pokud nejedeš autem, tak nejlepší možnost je:
+        <a target="_blank" href="https://shop.flixbus.cz/search?departureCity=1374&arrivalCity=5358&route=Praha-Karlovy+Vary&rideDate=21.08.2020&adult=1&_locale=cs&features%5Bfeature.darken_page%5D=1&wt_eid=2158868800932143972&wt_t=1588688036174&affiliate=%28not+set%29%2C&_ga=2.191994922.1451657393.1588688009-782391234.1560078046&currency=CZK&multitrips=0&atb_pdid=065cae03-3444-4f92-a193-e821823a59f2&_sp=3e3621c7-c6c6-4e87-84e0-76c2f871d71d">FlixBus</a>,
+        <a target="_blank" href="https://www.blablacar.cz/search?fn=Praha%2C%20%C4%8Cesko&fc=50.075538%2C14.4378&fcc=CZ&formatted_from=Praha&tn=Karlovy%20Vary&tc=50.231852%2C12.871961&tcc=CZ&formatted_to=Karlovy%20Vary&db=2019-06-28&hb=08&departure_location_id=eyJpIjoiQ2hJSmkzbHdDWnlUQzBjUmtFQVdaZy12QUFRIiwicCI6MSwidiI6MSwidCI6W119&arrival_location_id=eyJpIjoiQ2hJSlEwMnBYVUNab0VjUjBESFVRNHF2U3lnIiwicCI6MSwidiI6MSwidCI6W119&departure_city=Praha&arrival_city=Karlovy%20Vary&searchOrigin=search">BlaBlaCar</a>,
+        <a target="_blank" href="https://shop.regiojet.cz/?locale=cz&departureDate=2019-06-28&fromLocationId=10202003&toLocationId=17904010&fromLocationType=CITY&toLocationType=CITY&tariffs=REGULAR">RegioJet</a>
+        <br>Ne vlakem. Ikdyž to láká cesta k nám je vlakem pekelně dlouhá.
+        </p>
+        <p class="text-faded">
+          Dále pak bude fajn, když se ti povede přiblížit alespoň na zastávku:
+          <a target="_blank" href="https://mapy.cz/zakladni?x=12.8730498&y=50.2539939&z=18&source=pubt&id=15279791">Otovice, pošta</a> a to nejsnáz autobusem
+          <a target="_blank" href="https://mapy.cz/zakladni?x=12.8690641&y=50.2308157&z=18&source=pubt&id=15700059">č.19 ze zastávky tržnice</a>.
+        </p>
+        <p class="text-faded">Pak už jen pěšky přes kopec a jsi tu.</p>
+      </div>
+    {{ end }}
+    <div class="hidden">
+        <input id="gmap-lat" value="{{ .Site.Params.location.latitude }}" />
+        <input id="gmap-lng" value="{{ .Site.Params.location.longitude }}" />
+    </div>
+    <a target="_blank" href="https://www.google.com/maps?z=16&q={{ .Site.Params.location.latitude }},{{ .Site.Params.location.longitude }}&ll={{ .Site.Params.location.latitude }},{{ .Site.Params.location.longitude }}">
+        <div id="map">
+            &nbsp;
+        </div>
+    </a>
+</section>
+{{ end }}

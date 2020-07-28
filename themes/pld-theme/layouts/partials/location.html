@@ -26,14 +26,12 @@
         <p class="text-faded">Pak už jen pěšky přes kopec a jsi tu.</p>
       </div>
     {{ end }}
-    <div class="hidden">
-        <input id="gmap-lat" value="{{ .Site.Params.location.latitude }}" />
-        <input id="gmap-lng" value="{{ .Site.Params.location.longitude }}" />
-    </div>
-    <a target="_blank" href="https://www.google.com/maps?z=16&q={{ .Site.Params.location.latitude }},{{ .Site.Params.location.longitude }}&ll={{ .Site.Params.location.latitude }},{{ .Site.Params.location.longitude }}">
-        <div id="map">
-            &nbsp;
-        </div>
-    </a>
+    <iframe
+      id="google-map"
+      width="100%"
+      height="600"
+      frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed/v1/place?key={{ .Site.Params.location.maps_api_key }}&q={{ .Site.Params.location.latitude }},{{ .Site.Params.location.longitude }}&zoom=12&maptype=satellite" allowfullscreen>
+    </iframe>
 </section>
 {{ end }}

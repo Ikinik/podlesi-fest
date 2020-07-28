@@ -54,7 +54,7 @@ h6 {
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
 }
 
-h1#main-caption {font-family: 'Pacifico', 'Open Sans','Helvetica Neue',Arial,sans-serif; text-transform: none; font-size: 140px !important; font-weight: normal; color: #565656}
+h1#main-caption {font-family: 'Pacifico', 'Open Sans','Helvetica Neue',Arial,sans-serif; text-transform: none; font-size: 140px !important; font-weight: normal; color: white}
 
 p {
     margin-bottom: 20px;
@@ -169,10 +169,49 @@ aside {
   margin-left: 15px;
 }
 
-@media(min-width:768px) {
+/* Fixed width of menu expanding */
+@media (max-width: 960px) {
+  .navbar-header {
+      float: none;
+  }
+  .navbar-left,.navbar-right {
+      float: none !important;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+      top: 0;
+      border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-nav {
+      float: none!important;
+      margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .collapse.in{
+      display:block !important;
+  }
+
+}
+
+@media(min-width:960px) {
     .navbar-default {
         border-color: rgba(255,255,255);
-        background-color: transparent;
+        background-color: rgba(34,34,34,0.2);
     }
 
     .navbar-default .navbar-header .navbar-brand {
@@ -227,7 +266,7 @@ header {
     text-align: center;
     color: #fff;
     background-image: url(../img/header.jpg);
-    background-position: center;
+    background-position: top center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -241,11 +280,50 @@ header .header-content {
     text-align: center;
 }
 
+header #header-bottom-info {
+  overflow: hidden;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  padding: 0px;
+  font-size: 35px;
+  padding-top: 2px;
+  padding-left: 10px;
+  background-color: rgba(34,34,34,.4);
+  order-left: 1px solid white;
+  border-top-left-radius: 2px;
+  opacity: 0.9;
+}
+
+header #header-bottom-info .collapsed-span {
+  display: none;
+}
+
+@media(min-width:960px) {
+  header #header-bottom-info .collapsed-span {
+    display: inline;
+  }
+}
+
+header #header-bottom-info #count-down-box {
+  display: inline-block;
+  text-align: center;
+}
+
+header #header-bottom-info #count-down-box .t-box {
+  display: inline-block;
+  width: 52px;
+}
+
+header .header-content .header-content-inner {
+  display: none
+}
+
 header .header-content .header-content-inner h1 {
     margin-top: 0;
     margin-bottom: 0;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 700
 }
 
 header .header-content .header-content-inner hr {
@@ -259,7 +337,7 @@ header .header-content .header-content-inner p {
     color: rgba(255,255,255,.7);
 }
 
-@media(min-width:768px) {
+@media(min-width:960px) {
     header {
         min-height: 100%;
     }
@@ -524,10 +602,13 @@ body {
     webkit-tap-highlight-color: #222;
 }
 
-#map {
+#google-map {
+    display: block;
     height: 600px;
     overflow: visible;
     position: relative;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
 /* my specific styling */
@@ -539,14 +620,16 @@ body {
 .box-center {display: table; margin: 0px auto}
 
 table#countdown {display: table; margin: 0 auto; margin-top: 15px}
-table#countdown td {padding: 0px 25px 0px 25px; text-align: center; font-weight: bold; font-family: 'Ubuntu', sans-serif; color: #676666}
+table#countdown td {padding: 0px 25px 0px 25px; text-align: center; font-weight: bold; font-family: 'Ubuntu', sans-serif; color: white}
 table#countdown td.val {font-size: 55px}
 
 /* zooming images on hover */
 a.zoom img {transition: all 0.2s !important}
 a.zoom:hover img {
-  transform: scale(1.125) !important;
+  transform: scale(1.125) !important
 }
+
+#interprets a:hover {text-decoration: none} /* force denny interpret underlining on hover */
 
 #location.no-padding {padding-top: 60px}
 #location.no-padding .centered-content {padding-bottom: 60px}

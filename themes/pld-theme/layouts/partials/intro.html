@@ -19,27 +19,42 @@
         		  <td class="seconds tit">SECONDS</td>
         		</tr>
         	  </table>
-            <script type="text/javascript">
-              function countdown(){
-          			var d = new Date();
-          			var endTime = 1598007600000;
-          			var now = d.getTime();
-          			time = endTime - now;
-
-          			var sec = Math.ceil((time / 1000) % 60);
-          			var min = Math.ceil((time / (1000 * 60)) % 60);
-          			var hours = Math.ceil((time / (1000 * 60 * 60)) % 24);
-          			var days = Math.ceil((time / (1000 * 60 * 60 * 24)));
-
-          			document.getElementById('days_val').innerHTML = days;
-                document.getElementById('hours_val').innerHTML = hours;
-                document.getElementById('minutes_val').innerHTML = min;
-                document.getElementById('seconds_val').innerHTML = sec;
-          		}
-
-              countdown();
-        			setInterval(countdown, 1000);
-            </script>
         </div>
     </div>
+    <div id="header-bottom-info">
+      21-23.8<span class="collapsed-span"> | </span><div id="count-down-box"><div class="t-box" id="days_inline_val"></div>:<div class="t-box" id="hours_inline_val"></div>:<div class="t-box" id="minutes_inline_val"></div>:<div class="t-box" id="seconds_inline_val"></div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      function countdown(){
+        var d = new Date();
+        var endTime = 1598007600000;
+        var now = d.getTime();
+        time = endTime - now;
+
+        var sec = Math.ceil((time / 1000) % 60);
+        var min = Math.ceil((time / (1000 * 60)) % 60);
+        var hours = Math.ceil((time / (1000 * 60 * 60)) % 24);
+        var days = Math.ceil((time / (1000 * 60 * 60 * 24)));
+
+        document.getElementById('days_val').innerHTML = days;
+        document.getElementById('hours_val').innerHTML = hours;
+        document.getElementById('minutes_val').innerHTML = min;
+        document.getElementById('seconds_val').innerHTML = sec;
+
+        document.getElementById('days_inline_val').innerHTML = pad(days, 2);
+        document.getElementById('hours_inline_val').innerHTML = pad(hours, 2);
+        document.getElementById('minutes_inline_val').innerHTML = pad(min, 2);
+        document.getElementById('seconds_inline_val').innerHTML = pad(sec, 2);
+      }
+
+      function pad(num, size) {
+          var s = num+"";
+          while (s.length < size) s = "0" + s;
+          return s;
+      }
+
+      countdown();
+      setInterval(countdown, 1000);
+    </script>
 </header>
