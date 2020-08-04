@@ -32,6 +32,16 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 {{ "<![endif]-->" | safeHTML }}
 
+<!-- Google google_analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ .Site.GoogleAnalytics }}');
+</script>
+
+
 <style type="text/css">
   @import url(https://fonts.googleapis.com/css?family=Ubuntu&subset=latin-ext,latin);
   @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');

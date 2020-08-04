@@ -2,7 +2,7 @@ baseurl = "https://podlesi-fest.cz"
 languageCode = "cs"
 title = "Podlesí Fest"
 theme = "pld-theme"
-googleAnalytics = ""
+googleAnalytics = "UA-174451951-1"
 publishDir = "docs"
 
 [params]
