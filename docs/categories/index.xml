@@ -5,10 +5,6 @@
     <link>https://podlesi-fest.cz/categories/</link>
     <description>Recent content in Categories on Podlesí Fest</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>cs</language>
-    
-	<atom:link href="https://podlesi-fest.cz/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>cs</language><atom:link href="https://podlesi-fest.cz/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
