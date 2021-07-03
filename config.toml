@@ -37,7 +37,7 @@ publishDir = "docs"
 		[params.navigation.socials]
 			[[params.navigation.socials.list]]
 				icon = "facebook"
-				link = "https://www.facebook.com/groups/562104477769013/"
+				link = "https://www.facebook.com/events/322854656085625"
 
 			#[[params.navigation.socials.list]]
 			#	icon = "instagram"
@@ -79,15 +79,27 @@ publishDir = "docs"
 	    	#		title = "La Mind"
 	    	#		description = "Folk, Dream pop, Shoegaze, Rock"
 
+				[[params.interprets.list]]
+          icon = "harry"
+					link = "https://www.youtube.com/watch?v=Uj6shBUMZa4"
+          title = "Harry von Königgrätz"
+          description = "House dance music"
+
+				[[params.interprets.list]]
+          icon = "kostik"
+					link = "https://www.youtube.com/watch?v=K5vLNRCIF0k"
+          title = "Костик"
+          description = "Dubstep, Drum & Bass, club"
+
 		    [[params.interprets.list]]
-            icon = "youtube"
-						link = "https://www.youtube.com/watch?v=oaYteZ8QJsc&t=315s"
-            title = "DJ YouTube"
-            description = "Interpret, který nesmí chybět na žádné párty!"
+          icon = "youtube"
+					link = "https://www.youtube.com/watch?v=oaYteZ8QJsc&t=315s"
+          title = "DJ YouTube"
+          description = "Interpret, který nesmí chybět na žádné párty!"
 
 				[[params.interprets.list]]
 					icon = "you"
-					link = "https://www.instagram.com/la_mind_band/?fbclid=IwAR3QGcR8N8OpDsY-FeNaYT0JorS-3G7tEt9adrz4z0DcLRdS5OJAlMprg6o"
+					link = "https://www.youtube.com/watch?v=FrEP4MHCKDc&list=RDMM&start_radio=1&rv=oaYteZ8QJsc"
 					title = "Právě ty"
 					description = "Zúčastni se jam session"
 
