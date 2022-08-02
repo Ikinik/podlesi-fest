@@ -1,4 +1,5 @@
-baseurl = "https://podlesi-fest.cz"
+#baseurl = "https://podlesi-fest.cz"
+baseurl = "http://localhost:1313/"
 languageCode = "cs"
 title = "Podlesí Fest"
 theme = "pld-theme"
@@ -37,11 +38,11 @@ publishDir = "docs"
 		[params.navigation.socials]
 			[[params.navigation.socials.list]]
 				icon = "facebook"
-				link = "https://www.facebook.com/events/322854656085625"
+				link = "https://www.facebook.com/events/417065657120641"
 
-			#[[params.navigation.socials.list]]
-			#	icon = "instagram"
-			#	link = "https://www.instagram.com/?hl=cs#reactivated"
+			[[params.navigation.socials.list]]
+				icon = "instagram"
+				link = "https://www.instagram.com/podlesi_fest/"
 
 
 	# intro section
@@ -123,7 +124,7 @@ publishDir = "docs"
 
 		[[params.tickets.paras]]
 		#	para = "Vstupenky můžeš koupit v předprodeji. Budeme moc rádi když nám zavčasu přispěješ, abychom moli bez problémů vše zařídit a ty sis mohl řádně užít Podlesí jak se sluší a patří. <br>⌐■_■"
-			para = "Letošní ročník je vstupné zcela dobrovolné. Rozhodně se však na tebe nebudeme zlobit, když nám i tak nějaký ten fufník přispěješ, abychom mohli vše bez problémů zařídit a ty sis si mohl Podlesí řádně užít, jak se sluší a patří. <br>⌐■_■"
+			para = "Letošní ročník je vstupné zcela dobrovolné. Rozhodně se však na tebe nebudeme zlobit, když nám i tak nějaký ten fufník přispěješ, abychom mohli vše bez problémů zařídit a ty sis si mohl/a Podlesí řádně užít, jak se sluší a patří. <br>⌐■_■"
 
 	#	[[params.tickets.paras]]
 			#para = "Výše vstupného je dobrovolná a závisí na tobě jak moc nás budeš chtít podpořit. Neboj, vše dáváme do podlesí a ani koruna nepadne nazmar. Do morku kosti se snažíme využít každou&nbsp;peny, na maximální kalbu."
