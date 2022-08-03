@@ -74,15 +74,15 @@ publishDir = "docs"
 						link = "https://www.mixcloud.com/vaasha/?fbclid=IwAR03bk0CnI9956V1RKRttYoiC9Fqzui1KHYtuv9iEVdIiKZpExxTyDZMX6g"
       			description = "Deep techno, house"
 
-				#[[params.interprets.list]]
-	    	#		icon = "lamind"
-				#		link = "https://www.instagram.com/la_mind_band/?fbclid=IwAR3QGcR8N8OpDsY-FeNaYT0JorS-3G7tEt9adrz4z0DcLRdS5OJAlMprg6o"
-	    	#		title = "La Mind"
-	    	#		description = "Folk, Dream pop, Shoegaze, Rock"
+				[[params.interprets.list]]
+	    			icon = "konrads"
+						link = "https://soundcloud.com/konrad0"
+	    			title = "Konrad S."
+	    			description = "Synth jams"
 
 				[[params.interprets.list]]
           icon = "harry"
-					link = "https://www.youtube.com/watch?v=fx6oykKGag8"
+					link = "https://open.spotify.com/playlist/4X8JDu3V3P7udw4WvoouMs?si=LTGhMDvoSVOclzqzG6tYZA"
           title = "Harry von Königgrätz"
           description = "House dance music"
 
@@ -92,11 +92,11 @@ publishDir = "docs"
           title = "Костик"
           description = "Dubstep, Drum & Bass, club"
 
-		    [[params.interprets.list]]
-          icon = "youtube"
-					link = "https://www.youtube.com/watch?v=oaYteZ8QJsc&t=315s"
-          title = "DJ YouTube"
-          description = "Interpret, který nesmí chybět na žádné párty!"
+		    #[[params.interprets.list]]
+        #  icon = "youtube"
+				#	link = "https://www.youtube.com/watch?v=oaYteZ8QJsc&t=315s"
+        #  title = "DJ YouTube"
+        #  description = "Interpret, který nesmí chybět na žádné párty!"
 
 				[[params.interprets.list]]
 					icon = "you"
