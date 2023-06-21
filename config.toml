@@ -83,7 +83,7 @@ publishDir = "docs"
 				icon = "harry"
 				link = "https://open.spotify.com/playlist/4X8JDu3V3P7udw4WvoouMs?si=LTGhMDvoSVOclzqzG6tYZA"
 				title = "Harry von Königgrätz"
-				description = "House dance music"
+				description = "Popping, Hip Hop, Dance, House"
 
 			[[params.interprets.list]]
 				icon = "kostik"
