@@ -52,7 +52,6 @@ publishDir = "docs"
 	# About section
 	[params.star]
 		headline    = "Chci vystupovat"
-		#description = "[Lorem](//google.com) ipsum dolor sit amet, consectetur adipisicing elit. Praesentium similique eos eligendi error veritatis harum, sed aliquid totam, quam minus neque enim est architecto, ad. Maiores, aliquid, vitae!"
 		description = "Chtěl by si festovně zakalit, ale taky zahrát? Není problém. Napiš nám něco o sobě a nějak už se domluvíme. Případně nás můžeš kontaktovat přes facebook, nebo rovnou zavolat."
 		phone 			= "+420 608 055 822"
 		email 			= "party@podlesi-fest.cz"
