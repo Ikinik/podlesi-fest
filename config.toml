@@ -71,7 +71,7 @@ publishDir = "docs"
 				icon = "vaasha"
 				title = "Vaasha"
 				link = "https://www.mixcloud.com/vaasha/?fbclid=IwAR03bk0CnI9956V1RKRttYoiC9Fqzui1KHYtuv9iEVdIiKZpExxTyDZMX6g"
-				description = "Deep techno, house"
+				description = "Techno"
 
 			#[[params.interprets.list]]
 			#	icon = "konrads"
@@ -91,17 +91,17 @@ publishDir = "docs"
 				title = "Костик"
 				description = "Dubstep, Drum & Bass, club"
 
-		    #[[params.interprets.list]]
-        		#  icon = "youtube"
-				#	link = "https://www.youtube.com/watch?v=oaYteZ8QJsc&t=315s"
-        		#  title = "DJ YouTube"
-        		#  description = "Interpret, který nesmí chybět na žádné párty!"
+		    [[params.interprets.list]]
+        		icon = "cry.nn"
+				link = "https://soundcloud.com/crydotnn"
+        		title = "CRY.NN"
+        		description = "Techno"
 
-			#[[params.interprets.list]]
-			#	icon = "you"
-			#	link = "https://www.youtube.com/watch?v=FrEP4MHCKDc&list=RDMM&start_radio=1&rv=oaYteZ8QJsc"
-			#	title = "Právě ty"
-			#	description = "Zúčastni se jam session"
+			[[params.interprets.list]]
+				icon = "bigmama"
+				link = "#"
+				title = "BIGMAMA"
+				description = "dnb"
 
     # program modals
 	[params.program.modal]
