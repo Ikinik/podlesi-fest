@@ -61,6 +61,13 @@ $(document).ready(function(){
       var json_decoded = atou(req_decoded);
       var data = JSON.parse(json_decoded);
 
+      // generate payment QR code
+      var qr_link = "https://us-central1-podlesi-fest.cloudfunctions.net/qr"
+                  + "?amount=" + data["promise"] 
+                  + "&vs=" + data["variable_symbol"]
+                  + "&name=" + encodeURIComponent(data["name"]);
+      $('<img alt="qr payment" src="'+qr_link+'" width="350" height="350">').appendTo("#qr-box");
+
       $("#tickets-payment-promise").text(data["promise"] + " Kč");
       $("#tickets-payment-variable-symbol").text(data["variable_symbol"]);
       $("#tickets-payment-bank-account").text(data["bank_account"]);
