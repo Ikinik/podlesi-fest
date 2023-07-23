@@ -65,7 +65,7 @@ publishDir = "docs"
 				icon = "shorfitsch"
 				link = "https://soundcloud.com/ond-ej-orfa?fbclid=IwAR3G1s0lOMh8M2L4A9ZxHPJPybKcp9nsQv4q0L_c739A_mpjAEQhy9wIaBA"
 				title = "Shor Fitsch"
-				description = "Live improvised electronic dance&nbsp;music"
+				description = "Tropical techno"
 
 			[[params.interprets.list]]
 				icon = "vaasha"
