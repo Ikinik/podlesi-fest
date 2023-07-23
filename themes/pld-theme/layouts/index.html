@@ -3,7 +3,7 @@
     <head>
         {{ partial "head.html" . }}
     </head>
-    <body id="page-top">
+    <body id="page-top" class="{{ if .Site.Params.theme_dark_variant }}black-theme{{ end }}">
         {{ if or .Site.Params.navigation.links.star .Site.Params.navigation.links.interprets .Site.Params.navigation.links.program .Site.Params.navigation.links.contact }}
             {{ partial "nav.html" . }}
         {{ end }}

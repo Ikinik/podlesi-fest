@@ -67,6 +67,11 @@ p {
     color: #565656;
 }
 
+.bg-primary {
+    color: #fff;
+    background-color: #121212;
+}
+
 .bg-dark {
     color: #fff;
     background-color: #222;
@@ -619,6 +624,51 @@ body {
 .grecaptcha-badge { visibility: hidden;}
 .box-center {display: table; margin: 0px auto}
 .d-none {display: none}
+
+.black-theme {
+    color: #fff;
+    background-color: #121212;
+}
+
+.black-theme #mainNav.affix {
+    color: #fff;
+    background-color: #121212;
+    border-color: #c94731;
+    border-bottom-width: 2px;
+}
+
+.black-theme #mainNav.affix .nav a {
+    color: #fff;
+}
+
+.black-theme input {
+    border-color: #787878;
+    background-color: #121212;
+    color: #b5b5b6;
+}
+
+.black-theme button { background-color: #6b6b6b !important; }
+.black-theme button:hover {color: #dfdfdf;}
+
+.black-theme .modal .close-modal .lr,
+.black-theme .modal .close-modal .lr .rl {
+    background-color: #c94731;
+}
+
+.black-theme .modal-content {
+    background-color: #121212;
+}
+
+.black-theme .modal .close-modal:hover {opacity: 1;}
+.black-theme .modal .close-modal:hover .lr,
+.black-theme .modal .close-modal:hover .lr .rl {
+    background-color: #e76246;
+}
+
+.black-theme #qr-box img {filter: invert(1);}
+
+#tickets input.err, #tickets input.err::placeholder {background-color: #f05f40; color: rgb(51, 51, 51)}
+#tickets input.shadow {background-color: rgb(239, 239, 239)}
 
 table#countdown {display: table; margin: 0 auto; margin-top: 15px}
 table#countdown td {padding: 0px 25px 0px 25px; text-align: center; font-weight: bold; font-family: 'Ubuntu', sans-serif; color: white}
