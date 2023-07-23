@@ -641,13 +641,32 @@ body {
     color: #fff;
 }
 
+.black-theme #mainNav .navbar-toggle {
+    background-color: #121212;
+}
+
+@media (max-width: 960px) {
+    .black-theme #mainNav {
+        color: #fff;
+        background-color: #121212;
+        border-color: #c94731;
+        border-bottom-width: 2px;
+    }
+    
+    .black-theme #mainNav .nav a {
+        color: #fff;
+    }
+}
+
+
+
 .black-theme input {
     border-color: #787878;
     background-color: #121212;
     color: #b5b5b6;
 }
 
-.black-theme button { background-color: #6b6b6b !important; }
+.black-theme button { background-color: #6b6b6b; }
 .black-theme button:hover {color: #dfdfdf;}
 
 .black-theme .modal .close-modal .lr,
