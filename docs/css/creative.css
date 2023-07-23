@@ -618,6 +618,7 @@ body {
 
 .grecaptcha-badge { visibility: hidden;}
 .box-center {display: table; margin: 0px auto}
+.d-none {display: none}
 
 table#countdown {display: table; margin: 0 auto; margin-top: 15px}
 table#countdown td {padding: 0px 25px 0px 25px; text-align: center; font-weight: bold; font-family: 'Ubuntu', sans-serif; color: white}

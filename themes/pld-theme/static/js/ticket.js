@@ -66,7 +66,11 @@ $(document).ready(function(){
                   + "?amount=" + data["promise"] 
                   + "&vs=" + data["variable_symbol"]
                   + "&name=" + encodeURIComponent(data["name"]);
-      $('<img alt="qr payment" src="'+qr_link+'" width="350" height="350">').appendTo("#qr-box");
+      $('<img alt="qr payment" class="d-none" src="'+qr_link+'" width="350" height="350">')
+      .appendTo("#qr-box")
+      .on('load', function(){
+        $(this).delay(400).show("slow");
+      });
 
       $("#tickets-payment-promise").text(data["promise"] + " Kč");
       $("#tickets-payment-variable-symbol").text(data["variable_symbol"]);

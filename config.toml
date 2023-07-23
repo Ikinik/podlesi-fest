@@ -122,7 +122,7 @@ publishDir = "docs"
 		email = "party@podlesi-fest.cz"
 
 		[[params.tickets.paras]]
-			para = "Letošní ročník je vstupné zcela dobrovolné. Rozhodně se však na tebe nebudeme zlobit, když nám i tak nějaký ten fufník přispěješ, abychom mohli vše bez problémů zařídit a ty sis si mohl/a Podlesí řádně užít, jak se sluší a patří. <br>⌐■_■"
+			para = "Letošní ročník je vstupné opět dobrovolné. Rozhodně se však na tebe nebudeme zlobit, když nám i tak něco málo přispěješ. Doporučená výše vstupného na 2 dny je <strong>350 kč</strong>. Za ně dostaneš přístup k pípě po celou dobu akce, slušivou pásku, multipass a lehký tematický doplněk."
 
 		[[params.tickets.paras]]
-			para = "Neboj, vše dáváme do Podlesí. Ani koruna nepadne na učebnice, dětský sirotčinec, či boj proti malárii. Doporučená výše vstupného na 2 dny je <strong>350 kč</strong>. Samozřejmě se však nebudeme zlobit ani za klíčky od auta, či zámek po babičce ;)"
+			para = "Pokud se nás rozhodneš podpořit částkou <strong>450+</strong>. Odměnou ti bude navíc bude ještě lepší karma a originální placka v letošním designu akce."
