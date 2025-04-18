@@ -1,9 +1,8 @@
-baseurl = "https://podlesi-fest.cz"
-#baseurl = "http://localhost:1313/"
+#baseurl = "https://podlesi-fest.cz"
+baseurl = "http://localhost:1313/"
 languageCode = "cs"
 title = "Podlesí Fest"
 theme = "pld-theme"
-googleAnalytics = "UA-174451951-1"
 publishDir = "docs"
 
 [params]
@@ -19,6 +18,9 @@ publishDir = "docs"
 	# You can find example projects at 'exampleSite/data/projects'. Copy the 'projects'
 	# folder into the 'data' directory at the root of this Hugo site.
 	# For more information take a look at the README.
+
+	# Define id for google analytics
+	googleAnalytics = "UA-174451951-1"
 
 	# The path must be relative to the static folder
 	favicon = "favicon.ico"
@@ -51,6 +53,9 @@ publishDir = "docs"
 	[params.intro]
 		# To change the background of the hero section, replace the 'header.jpg' at './static/img' with your own.
 		slogan     = "Podlesí Fest"
+		date = "25-27.7"
+		unix_timestam_counter = "1753466400000"
+
 
 	# About section
 	[params.star]
@@ -62,6 +67,7 @@ publishDir = "docs"
 	# Service section
 	[params.interprets]
 		headline = "Letos vystoupí"
+		display_lineup = false
 
 			[[params.interprets.list]]
 				icon = "shorfitsch"
@@ -93,17 +99,17 @@ publishDir = "docs"
 				title = "Костик"
 				description = "Dubstep, Drum & Bass, club"
 
-		    [[params.interprets.list]]
-        		icon = "cry.nn"
-				link = "https://soundcloud.com/crydotnn"
-        		title = "CRY.NN"
-        		description = "Techno"
+		    #[[params.interprets.list]]
+        	#	icon = "cry.nn"
+			#	link = "https://soundcloud.com/crydotnn"
+        	#	title = "CRY.NN"
+        	#	description = "Techno"
 
-			[[params.interprets.list]]
-				icon = "bigmama"
-				link = "#"
-				title = "BIGMAMA"
-				description = "dnb"
+			#[[params.interprets.list]]
+			#	icon = "bigmama"
+			#	link = "#"
+			#	title = "BIGMAMA"
+			#	description = "dnb"
 
     # program modals
 	[params.program.modal]
@@ -124,7 +130,7 @@ publishDir = "docs"
 		email = "party@podlesi-fest.cz"
 
 		[[params.tickets.paras]]
-			para = "Letošní ročník je vstupné opět dobrovolné. Rozhodně se však na tebe nebudeme zlobit, když nám i tak něco málo přispěješ. Doporučená výše vstupného na 2 dny je <strong>350 kč</strong>. Za ně dostaneš přístup k pípě po celou dobu akce, slušivou pásku, multipass a lehký tematický doplněk."
+			para = "Letošní ročník je vstupné opět dobrovolné. Rozhodně se však na tebe nebudeme zlobit, když nám i tak něco málo přispěješ. Doporučená výše vstupného na 2 dny je <strong>350 kč</strong>. Za ně dostaneš přístup k pípě po celou dobu akce, slušivou pásku a lehký tematický doplněk."
 
 		[[params.tickets.paras]]
-			para = "Pokud se nás rozhodneš podpořit částkou <strong>450+</strong>. Odměnou ti bude navíc bude ještě lepší karma a originální placka v letošním designu akce."
+			para = "Pokud se nás rozhodneš podpořit částkou <strong>450+</strong>. Odměnou ti bude navíc ještě lepší karma a vzácný ještěří artefakt."
