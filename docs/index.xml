@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Podlesí Fest</title>
-    <link>http://localhost:1313/</link>
+    <link>https://podlesi-fest.cz/</link>
     <description>Recent content on Podlesí Fest</description>
     <generator>Hugo</generator>
     <language>cs</language>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://podlesi-fest.cz/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

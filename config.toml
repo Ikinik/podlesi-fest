@@ -1,5 +1,5 @@
-#baseurl = "https://podlesi-fest.cz"
-baseurl = "http://localhost:1313/"
+baseurl = "https://podlesi-fest.cz"
+#baseurl = "http://localhost:1313/"
 languageCode = "cs"
 title = "Podlesí Fest"
 theme = "pld-theme"
