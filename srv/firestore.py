@@ -11,12 +11,12 @@ firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 doc_ref = db.collection(u'tickets').add({
-    u'email': u'kamil.sorfa@gmail.com',
-    u'first-name': u'Adam',
-    u'sure-name': u'Šorfa',
+    u'email': u'kamil.kadil@gmail.com',
+    u'first-name': u'Kamil',
+    u'sure-name': u'Kadil',
     u'promise': 300,
     u'paid': 300,
-    u'tel': 722530274
+    u'tel': 123456789
 })
 
 fid = doc_ref[1].id
