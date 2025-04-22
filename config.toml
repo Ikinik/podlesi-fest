@@ -42,7 +42,7 @@ publishDir = "docs"
 		[params.navigation.socials]
 			[[params.navigation.socials.list]]
 				icon = "facebook"
-				link = "https://www.facebook.com/groups/562104477769013"
+				link = "https://www.facebook.com/events/650366514291990"
 
 			[[params.navigation.socials.list]]
 				icon = "instagram"
@@ -99,11 +99,11 @@ publishDir = "docs"
 				title = "Костик"
 				description = "Dubstep, Drum & Bass, club"
 
-		    #[[params.interprets.list]]
-        	#	icon = "cry.nn"
-			#	link = "https://soundcloud.com/crydotnn"
-        	#	title = "CRY.NN"
-        	#	description = "Techno"
+		    [[params.interprets.list]]
+        		icon = "cry.nn"
+				link = "https://soundcloud.com/crydotnn"
+        		title = "CRY.NN"
+        		description = "Techno"
 
 			#[[params.interprets.list]]
 			#	icon = "bigmama"
